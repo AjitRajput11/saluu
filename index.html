@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#120b18">
+  <title>For You ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stars"></div>
+  <div class="hearts"></div>
+
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">A little corner of the internet, made only for you</p>
+      <h1>For <span>My Favorite Person</span> ❤️</h1>
+      <p class="hero-text">
+        Some people enter your life quietly… and somehow become the most beautiful part of it.
+      </p>
+      <button class="primary-btn" onclick="scrollToSection('story')">Open Our Little World ↓</button>
+    </div>
+    <div class="scroll-hint">scroll slowly ↓</div>
+  </header>
+
+  <main>
+
+    <section id="story" class="section">
+      <div class="section-heading">
+        <span>01</span>
+        <h2>Our little story</h2>
+      </div>
+      <div class="story-card reveal">
+        <p>
+          I don't know exactly when you became so important to me.
+          Maybe it was one conversation, one smile, one random moment...
+          or maybe it happened so slowly that I never noticed.
+        </p>
+        <p>
+          All I know is that now, when something good happens,
+          you're one of the first people I want to tell.
+        </p>
+        <p class="signature">— Someone who is very lucky to have you</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <span>02</span>
+        <h2>Little things I love</h2>
+      </div>
+      <div class="love-grid">
+        <div class="love-card reveal"><div class="icon">✨</div><h3>Your vibe</h3><p>That effortless way you can make an ordinary moment feel special.</p></div>
+        <div class="love-card reveal"><div class="icon">🌙</div><h3>Your presence</h3><p>Even a simple conversation with you can change the mood of my entire day.</p></div>
+        <div class="love-card reveal"><div class="icon">🫶</div><h3>Your heart</h3><p>The little things you do, often without realizing how much they mean.</p></div>
+        <div class="love-card reveal"><div class="icon">🔥</div><h3>Your crazy side</h3><p>Cool, unpredictable, slightly impossible... and somehow my favorite.</p></div>
+      </div>
+    </section>
+
+    <section class="section memories-section">
+      <div class="section-heading">
+        <span>03</span>
+        <h2>Our memories</h2>
+      </div>
+      <p class="muted">Replace these photos with your own in the <b>images</b> folder.</p>
+      <div class="memory-grid">
+        <figure class="memory reveal">
+          <img src="images/photo1.jpg" alt="Our memory 1">
+          <figcaption><b>That moment ❤️</b><small>Add your caption here</small></figcaption>
+        </figure>
+        <figure class="memory reveal">
+          <img src="images/photo2.jpg" alt="Our memory 2">
+          <figcaption><b>One of my favorites</b><small>Add your caption here</small></figcaption>
+        </figure>
+        <figure class="memory reveal">
+          <img src="images/photo3.jpg" alt="Our memory 3">
+          <figcaption><b>A beautiful day</b><small>Add your caption here</small></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <span>04</span>
+        <h2>A letter for you</h2>
+      </div>
+      <div class="letter-wrap reveal">
+        <button class="envelope" id="letterBtn" onclick="openLetter()">
+          <span>💌</span>
+          <b>Tap to open</b>
+        </button>
+        <div class="letter hidden" id="letter">
+          <p>Hey you,</p>
+          <p>
+            I could write a hundred paragraphs and still probably miss half
+            the things I feel when I think about you.
+          </p>
+          <p>
+            You have become one of those rare people whose existence makes
+            life feel a little warmer. I love the conversations, the jokes,
+            the silence, the random moments, and even the little things
+            that probably seem completely normal to you.
+          </p>
+          <p>
+            I don't need every day to be perfect. I just want more ordinary
+            days that somehow become special because you're part of them.
+          </p>
+          <p class="letter-end">Thank you for being you. ❤️</p>
+          <p>— Me</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section countdown-section">
+      <div class="section-heading">
+        <span>05</span>
+        <h2>One more little surprise</h2>
+      </div>
+      <div class="surprise-card reveal">
+        <p class="muted">There is something I want you to remember:</p>
+        <h2 id="typedText"></h2>
+        <button class="primary-btn" onclick="showSurprise()">Don't click this 😌</button>
+        <p id="surprise" class="surprise hidden">
+          No matter how busy life gets, I hope we always find our way back
+          to the little moments that made us smile. ❤️
+        </p>
+      </div>
+    </section>
+
+    <section class="final-section">
+      <div class="final-glow"></div>
+      <p class="eyebrow">And finally...</p>
+      <h2>You're my favorite<br><span>part of the story.</span></h2>
+      <p>And I hope this story has many, many more chapters.</p>
+      <div class="big-heart">♥</div>
+      <p class="tiny">Made with a little HTML, a little JavaScript, and a lot of feelings.</p>
+    </section>
+
+  </main>
+
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Play music">♫</button>
+  <audio id="music" loop>
+    <source src="music/our-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
